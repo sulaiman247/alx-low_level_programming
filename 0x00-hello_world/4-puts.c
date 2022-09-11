@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 * main - display a text programming is like building a multilingual puzzle.
-* Return :return 0
+* Return: this will return a value 0.
 */
 int main(void)
 {
