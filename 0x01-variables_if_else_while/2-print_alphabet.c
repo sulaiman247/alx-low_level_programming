@@ -2,14 +2,14 @@
 
 /**
  * main - printing all alphabets in lowercase to  screeen
- * Return : 0
+ * Return: 0
  */
 
-int main(void)
+int main()
 {
 	char c;
 
-	for(c = 'a';c <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
