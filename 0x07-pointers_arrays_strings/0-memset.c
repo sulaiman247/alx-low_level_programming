@@ -1,7 +1,6 @@
 
-/*
- * _memset -  this is eill replace the me
- *
+/**
+ * _memset - this will replace n memory of s with b 
  *@*s : array to be passed
  *@b : character to replace memory
 *@n : number of memory space to replace
