@@ -1,5 +1,6 @@
 
-/*memset -  this is eill replace the me
+/*
+ * _memset -  this is eill replace the me
  *
  *@*s : array to be passed
  *@b : character to replace memory
@@ -7,13 +8,13 @@
 *
 * Return: this will return a pointer.
 *
- */
-
-
+*/
 
 char *_memset(char *s, char b, unsigned int n)
-{	
-	unsigned int i = 0 ;
+{
+	unsigned int i; 
+	i = 0 ;
+
 	while (i < n)
 	{
 		*(s + i) = b;
