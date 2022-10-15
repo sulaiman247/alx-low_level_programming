@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _strchr - this function finds a string c in s
  * @s: this is the set of values
