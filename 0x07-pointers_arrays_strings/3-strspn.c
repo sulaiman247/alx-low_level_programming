@@ -1,17 +1,23 @@
 #include "main.h"
 
 /**
- * _strspn - search last position of a string 
+ * _strspn - search last position of a strin
  * @s:the string to be searched
  * @accept: the strings we are looling for.
  *
- * Return: an integer 
+ * Return: an integer
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
 	int n;
-	
+
+	int  arn;
+
+	arn  = 1;
+
+char a[arn];
+
 	int c;
 
 	int i;
@@ -28,10 +34,13 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[n])
 			{
-				if(i > c)
+				for( int j = 0; j < arn; j++)
 				{
+					if (a[j] != accept[n])
+					{
+					if(i > c)
+			
 					c = n;
-				}
 			}
 			i++;
 		}
