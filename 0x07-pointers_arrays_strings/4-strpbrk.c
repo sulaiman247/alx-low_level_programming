@@ -27,8 +27,7 @@ int m;
 		m = s[counter];
 		if (m <= 90)
 			ps[counter] = (m + 32);
-		else
-			ps[counter] = s[counter];
+
 	}
 counter = 0;
 
@@ -40,8 +39,6 @@ for (counter = 0; accept[counter] != '\0'; counter++)
 
 	if (m <= 90)
 		pa[counter] = (m + 32);
-	else
-	pa[counter] = accept[counter];
 }
 
 
