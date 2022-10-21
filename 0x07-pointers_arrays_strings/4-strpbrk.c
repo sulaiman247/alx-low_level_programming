@@ -16,9 +16,9 @@ char *_strpbrk(char *s, char *accept)
 
 int counter;
 
-char *ps;
+char **ps = s;
 
-char *pa;
+char **pa = accept;
 
 int m;
 
@@ -26,22 +26,22 @@ int m;
 	{
 		m = s[counter];
 		if (m <= 90)
-			ps[counter] = (m + 32);
+			*ps[counter] = (m + 32);
 		else
-			ps[counter] = s[counter];
+			*ps[counter] = s[counter];
 	}
 counter = 0;
 
 m = 0;
 
-for (counter = 0; pa[counter] != '\0'; counter++)
+for (counter = 0; accept[counter] != '\0'; counter++)
 {
 	m = accept[counter];
 
 	if (m <= 90)
-		pa[counter] = (m + 32);
+		*pa[counter] = (m + 32);
 	else
-		pa[counter] = accept[counter];
+		*pa[counter] = accept[counter];
 }
 
 
