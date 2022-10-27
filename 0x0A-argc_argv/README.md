@@ -1,1 +1,1 @@
-working on commandlinr input project
+Introductionto  C - argc, argv

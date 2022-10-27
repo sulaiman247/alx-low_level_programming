@@ -1,22 +1,20 @@
+#include "main.h"
+
 /**
- * _memset - replace memory
- * @s : memory to be replaced.
- * @b : character to replace s
- * @n : number of memory space to replace
- *
- * Return: s
- *
+ * _memset - ironnou
+ * @s: pointer to char params
+ * @b: data to change
+ * @n: index
+ * Return: *s
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int i;
+	unsigned int i;
 
-i = 0;
-
-while (i < n)
-{
-*(s + i) = b;
-i++;
-}
-return (s);
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
 }

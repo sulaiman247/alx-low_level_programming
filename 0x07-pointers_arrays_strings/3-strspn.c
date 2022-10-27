@@ -1,51 +1,25 @@
-#include "main.h"
-
 /**
- * _strspn - search last position of a strin
- * @s:the string to be searched
- * @accept: the strings we are looling for.
- *
- * Return: an integer
- */
-
+* _strspn - Gets the length of a prefix substring.
+* @s: String where substring will look.
+* @accept: Substring of accepted chars.
+* Return: Length of occurrence.
+*/
 unsigned int _strspn(char *s, char *accept)
 {
-	int n;
+	unsigned int c = 0;
+	char *t = accept;
 
-	int  arn;
-
-	arn  = 1;
-
-char a[arn];
-
-	int c;
-
-	int i;
-
-	i = 0;
-
-	c = 0;
-
-	n = 0;
-
-	while (accept[n] != '\0')
+	while (*s++)
 	{
-		while (s[i] != '\0')
-		{
-			if (s[i] == accept[n])
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
 			{
-				for( int j = 0; j < arn; j++)
-				{
-					if (a[j] != accept[n])
-					{
-					if(i > c)
-			
-					c = n;
+				c++;
+				break;
 			}
-			i++;
-		}
-		n++;
+		if (!(*--accept))
+			break;
+		accept = t;
 	}
 	return (c);
 }
-

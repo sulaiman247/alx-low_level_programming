@@ -1,49 +1,32 @@
 #include "main.h"
-#include <stddef.h>
-
 
 /**
- * _strstr - serach for a needle in an haystack.
- * @haystack: a parameter containing hay of string
- * @neddle: the string to find.
- *
- * Return: a pointer.
- */
+* _strstr - function locate
+* @haystack: pointer to char
+* @needle: pointer to char
+* Return: 0
+*/
 
-char* _strstr(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	
-	i = 0;
+	char *result = haystack, *fneedle = needle;
 
-	int j;
-       
-	j = 0;
-
-	while(haystack[i] != '\0')
+	while (*haystack)
 	{
-		if(haystack[i] == needle[0])
+		while (*needle)
 		{
-			int n;
-			
-			n = i;
-
-			while(needle[j] != '\0')
+			if (*haystack++ != *needle++)
 			{
-				if (haystack[n] == needle[j])
-				{
-					n++;
-					j++;
-				}
-				else
-				{
-					j=0;
-					i++;
-					break;
-				}
-				return (i);
+				break;
 			}
-			i++;
 		}
-		return NULL;
+		if (!*needle)
+		{
+			return (result);
+		}
+		needle = fneedle;
+		result++;
+		haystack = result;
 	}
+	return (0);
+}
